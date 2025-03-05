@@ -57,7 +57,7 @@ private static User loginUser() {
         String password = scanner.nextLine();
 
      
-        if (existingUser.checkPassword(password)) {
+        if (existingUser.checkpassword(password)) {
             System.out.println("✅ Login successful!");
             return existingUser;
         }
@@ -126,7 +126,7 @@ private static void commentOnPost() {
 
     System.out.print("📌 Choose a post number: ");
     int postIndex = scanner.nextInt() - 1;
-    scanner.nextLine(); // Consume newline
+    scanner.nextLine(); 
 
     if (postIndex < 0 || postIndex >= posts.size()) {
         System.out.println("❌ Invalid choice!");

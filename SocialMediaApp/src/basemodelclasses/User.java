@@ -1,30 +1,17 @@
 package basemodelclasses;
 import java.util.*;
 
-public class User {
-private String UserName;
-private String Password;
+public class User extends baseaccount {
 private List<Post>posts;
 private List<String>message;
 
 public User(String UserName,String Password)
     {
-	this.UserName=UserName;
-	this.Password=Password;
+	super(UserName,Password);
 	this.posts=new ArrayList<>();
 	this.message=new ArrayList<>();
 	
 	}
-
-public String getUserName()
- 	{
-	return UserName;
-	
-	}
-
-public boolean checkPassword(String inputpass) {
-    return Password.equals(inputpass); 
-}
 
 public void createPost(String content) {
     posts.add(new Post(this, content));
